@@ -15,7 +15,7 @@
     border-radius: 5px;
     width: 300px;
     padding: 3px;
-    color: var(--gray);
+    /* color: var(--gray); */
 }
 
 .card h3 {

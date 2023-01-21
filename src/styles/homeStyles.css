@@ -1,6 +1,5 @@
 .homeTitle{
     display: block;  
-    color: #fff;
     margin: 0;
     font-size: 100px;
     line-height: 7rem;
@@ -78,4 +77,9 @@
     color: var(--black);
     font-weight: bold;
     transition: background 2s;
+}
+
+.btn-theme{
+    position: absolute;
+    right: 1rem;
 }

@@ -5,14 +5,20 @@ import Cursor from './Cursor'
 import Skills from './Skills'
 import Work from './Work'
 
-const Home = () => {
+const Home = (props) => {
+  const { theme } = props;
+
+  console.log(theme);
+
+
   return (
     <div className='homeContainer'>
 
       <div className="cursor">
-        <Cursor />
+        {// <Cursor />
+        }
       </div>
-      
+
       <h1 className='homeTitle'>
         <span className='jump'>H</span>
         <span className='jump'>o</span>
