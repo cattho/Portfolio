@@ -18,7 +18,7 @@ const Work = () => {
                 <CardComp
                     image='https://res.cloudinary.com/dfp8qduho/image/upload/v1645226601/imagen_2022-02-18_182319_nggyga.png'
                     link='https://block-master-sebas.netlify.app'
-                    text='Aplicación creada con ReactJS consumiendo la API de TheMovieDB, implementacion de Redux con sistema de proteccion de rutas, implementacion de CRUD, inicio de sesion con firebase, sistema de protección de rutas, buscador de peliculas, listado de peliculas con mayor y menor valoración.'
+                    text='Aplicación creada consumiendo la API de TheMovieDB, implementacion de Redux con sistema de proteccion de rutas, implementacion de CRUD, inicio de sesion con firebase, sistema de protección de rutas, buscador de peliculas.'
                     projectName='Block Master- Aplicación de peliculas'
                 />
 
@@ -36,7 +36,7 @@ const Work = () => {
                     projectName='Dev-Rock Store'
                 />
             </CardGroup>
-            <p className='textSkills'>Puedes ver mas de mi trabajo en mi <a href='https://github.com/cattho' target='_blank' className='linkText' rel="noopener noreferrer">GitHub</a></p>
+            {/* <p className='textSkills'>Puedes ver mas de mi trabajo en mi <a href='https://github.com/cattho' target='_blank' className='linkText' rel="noopener noreferrer">GitHub</a></p> */}
         </div>
     )
 }
