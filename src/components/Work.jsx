@@ -5,7 +5,7 @@ import { CardComp } from './CardComp'
 
 const Work = () => {
     return (
-        <div className='work-page'>
+        <div className='work-page container-fluid'>
             <h1><span className='titleSkills'>Proyectos</span></h1>
             <CardGroup className='cardsContainer'>
                 <CardComp
