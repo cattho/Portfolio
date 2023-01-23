@@ -49,6 +49,8 @@ code {
   body {
     justify-content: center;
     box-sizing: border-box;
+    padding: .7rem;
+    padding-bottom: 1rem;
   }
 
   .cursor{
