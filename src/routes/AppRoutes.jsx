@@ -37,7 +37,7 @@ const AppRoutes = () => {
             <GlobalStyle />
             <BrowserRouter>
                 <NavBar />
-                <input type='button' onClick={toggleTheme} value={valueBtn} className='btn-theme' />
+                {/* <input type='button' onClick={toggleTheme} value={valueBtn} className='btn-theme' /> */}
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/skills' element={<Skills />} />

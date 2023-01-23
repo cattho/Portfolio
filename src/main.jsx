@@ -9,7 +9,7 @@ import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <div className='container'>
+    <div className='container-fluid'>
       <App />
     </div>
   </Provider>,
