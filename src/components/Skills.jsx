@@ -1,11 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import JumperCharacter from './JumperCharacter'
+import SkillsCards from './SkillsCards'
 
 const Skills = () => {
+  const text = ['Habilidades y', 'experiencia']
+
   return (
     <div className='skills-page'>
-      <div className='text-zone'> 
-        <h1><span className='titleSkills'>Habilidades y</span> <br /> <span className='titleSkills'>experiencia</span></h1>
+      <div className='text-zone'>
+        <h1>
+          {text.map((t, id) => (
+            <div key={id}>
+              {t.split('').map((char, p) => (
+                <JumperCharacter
+                  key={p}
+                  character={char}
+                  className={char === 's' ? 'titleSkills spaceCap' : 'titleSkills'}
+                />
+              ))}
+            </div>
+          ))}
+        </h1>
         <p className='textSkills'>
           Desde que empecé mi viaje como desarrollador me enamore de esta profesión, siendo sincero ha sido un gran reto para mi.
           <br />
@@ -16,62 +32,29 @@ const Skills = () => {
       </div>
 
       <div className='skills-details'>
-        {/* <div>
-          <div>
-            <p className='textSkillsDetail'>Front-End</p>
-            <div className='contourBars'>
-              <span className='barRed'></span>
-            </div>
-          </div>
-
-          <div>
-            <p className='textSkillsDetail'>HTML</p>
-            <div className='contourBars'>
-              <span className='barBlue'></span>
-            </div>
-          </div>
-
-          <div>
-            <p className='textSkillsDetail'>CSS</p>
-            <div className='contourBars'>
-              <span className='barPurple'></span>
-            </div>
-          </div>
-
-          <div>
-            <p className='textSkillsDetail'>JavaScript</p>
-            <div className='contourBars'>
-              <span className='barYellow'></span>
-            </div>
-          </div>
-
-          <div>
-            <p className='textSkillsDetail'>React-JS</p>
-            <div className='contourBars'>
-              <span className='barblue2'></span>
-            </div>
-          </div>
-
-        </div> */}
-
         <h1 className='textSkillsDetail' >Certificaciones</h1>
         <div className='certifications'>
-          <div className='cardCerti'>
-            <a href='https://res.cloudinary.com/dfp8qduho/image/upload/v1651589501/ofhrji2cq7rlmntbmtm9.jpg' target='_blank' rel='noopener noreferrer'><h3 className='textSkillsDetail'>Academia Geek</h3></a>
-            <p className='textCard'>Desarrollador Front-end</p>
-            <p className='textCard'>Diciembre 2021-Marzo 2022</p>
-          </div>
+          <SkillsCards
+            urlCertificado='https://res.cloudinary.com/dfp8qduho/image/upload/v1651589501/ofhrji2cq7rlmntbmtm9.jpg'
+            entidad='Academia Geek'
+            certificado='Desarrollador Front-End'
+            fecha='Marzo 2022'
+          />
 
-          <div className='cardCerti'>
-            <a href='https://www.freecodecamp.org/certification/Cattho/front-end-development-libraries' target='_blank' rel='noopener noreferrer'><h3 className='textSkillsDetail'>Front End Development Libraries</h3></a>
-            <p className='textCard'>Febrero 2022</p>
-          </div>
+          <SkillsCards
+            urlCertificado='https://www.freecodecamp.org/certification/Cattho/front-end-development-libraries'
+            entidad='freeCodeCamp'
+            certificado='Front End Development Libraries'
+            fecha='Febrero 2022'
+          />
 
-          <div className='cardCerti'>
-            <a href='https://www.freecodecamp.org/certification/Cattho/javascript-algorithms-and-data-structures' target='_blank' rel='noopener noreferrer'><h3 className='textSkillsDetail'>JavaScript Algorithms and Data Structures</h3></a>
-            <p className='textCard'>Febrero 2022</p>
-          </div>
-
+          <SkillsCards
+            urlCertificado='https://www.freecodecamp.org/certification/Cattho/javascript-algorithms-and-data-structures'
+            entidad='freeCodeCamp'
+            certificado='JavaScript Algorithms and Data Structures'
+            fecha='Febrero 2022'
+          />
+          
         </div>
       </div>
     </div>

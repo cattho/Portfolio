@@ -1,9 +1,7 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
 
 export const CardComp = (props) => {
-    const { image, link, text, projectName } = props;
+    const { image, urlProject, urlGitHub, text, projectName } = props;
     return (
         <div className="card">
             <div className="lines"></div>
@@ -17,8 +15,8 @@ export const CardComp = (props) => {
                         <p>{text}</p>
                     </div>
                     <div className="actionBtn">
-                        <a href={link} target='_blank'><button>Proyecto</button></a>
-                        <a href={link} target='_blank'><button>Código</button></a>
+                        <a href={urlProject} target='_blank'><button>Proyecto</button></a>
+                        <a href={urlGitHub} target='_blank'><button>Código</button></a>
                     </div>
                 </div>
             </div>

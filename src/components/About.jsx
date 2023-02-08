@@ -1,24 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import JumperCharacter from './JumperCharacter';
 import Sphere from './Sphere'
 
 const About = () => {
-
+  const text = ['¿Quién Soy?'];
 
   return (
     <div className='skills-page'>
       <div className='text-zone'>
         <h1>
-          <span className='jump titleSkills'>¿</span>
-          <span className='jump titleSkills'>Q</span>
-          <span className='jump titleSkills'>u</span>
-          <span className='jump titleSkills'>i</span>
-          <span className='jump titleSkills'>e</span>
-          <span className='jump titleSkills spaceCap'>n</span>
-          <span className='jump titleSkills'>S</span>
-          <span className='jump titleSkills'>o</span>
-          <span className='jump titleSkills'>y</span>
-          <span className='jump titleSkills'>?</span>
+          {text.map((t, id) => (
+            <div key={id}>
+              {t.split('').map((char, p) => (
+                <JumperCharacter
+                  key={p}
+                  character={char}
+                  className={char === 'n' ? 'titleSkills spaceCap' : 'titleSkills'}
+                />
+              ))}
+            </div>
+          ))}
         </h1>
         <p className='textSkills'>Soy un desarrollador web ubicado en la ciudad de Ibagué, Colombia. Aunque estoy iniciando mi carrera en el desarrollo web tengo una gran pasión por toda la parte de creación Front end, para brindar al usuario aplicaciones intuitivas y dinámicas.</p>
 

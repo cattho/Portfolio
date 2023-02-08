@@ -3,9 +3,11 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { sendDataAsync } from '../actions/userAction';
+import JumperCharacter from './JumperCharacter';
+import MainButton from './MainButton';
 
 const Contact = () => {
-
+  const text = ['Contactame!']
   const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
@@ -58,22 +60,22 @@ const Contact = () => {
 
     dispatch(sendDataAsync(nombre, email, asunto, mensaje))
   };
-
-
   return (
     <div className='container contact-page'>
       <h1>
-        <span className='jump titleSkills ml'>C</span>
-        <span className='jump titleSkills'>o</span>
-        <span className='jump titleSkills'>n</span>
-        <span className='jump titleSkills'>t</span>
-        <span className='jump titleSkills'>a</span>
-        <span className='jump titleSkills'>c</span>
-        <span className='jump titleSkills'>t</span>
-        <span className='jump titleSkills'>a</span>
-        <span className='jump titleSkills'>m</span>
-        <span className='jump titleSkills spaceCap'>e</span>
-        <span className='jump titleSkills'>!</span>
+        {
+          text.map((t, id) => (
+            <div key={id}>
+              {t.split('').map((char, p) => (
+                <JumperCharacter
+                  key={p}
+                  character={char}
+                  className='titleSkills'
+                />
+              ))}
+            </div>
+          )
+          )}
       </h1>
 
       <div className="form-map-container">
@@ -102,16 +104,13 @@ const Contact = () => {
             type='text'
             placeholder='Mensaje'
             name='mensaje' />
-
-          <div className="button-container">
-            <button type='submit' className='contactButton'>Enviar Mensaje!</button>
-          </div>
+          <MainButton>Enviar Mensaje!</MainButton>
         </form>
 
 
-        <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127295.79546459236!2d-75.25681815558085!3d4.412286216249967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c491115f4d5f%3A0xe0cae43859d2401e!2zSWJhZ3XDqSwgVG9saW1h!5e0!3m2!1ses-419!2sco!4v1650742161637!5m2!1ses-419!2sco" loading="lazy" title='Google-maps'/>
+        <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127295.79546459236!2d-75.25681815558085!3d4.412286216249967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c491115f4d5f%3A0xe0cae43859d2401e!2zSWJhZ3XDqSwgVG9saW1h!5e0!3m2!1ses-419!2sco!4v1650742161637!5m2!1ses-419!2sco" loading="lazy" title='Google-maps' />
         <Link to='/' className='comeback-btn-container'>
-          <button type='submit' className='comeback-btn'>Volver al inicio</button>
+          <MainButton>Volver al inicio</MainButton>
         </Link>
       </div>
     </div>
