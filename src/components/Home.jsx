@@ -8,7 +8,7 @@ import Skills from './Skills'
 import Work from './Work'
 
 const Home = () => {
-  const text = ['Hola,', 'Soy Sebastián,', 'Desarrollador Front-End'];
+  const text = ['Hola,', 'Soy Sebastián,', 'Desarrollador Web'];
   return (
     <div className='homeContainer container-fluid'>
 
