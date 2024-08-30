@@ -2,8 +2,7 @@
     position: relative !important;
     padding-top: 150px !important;
     padding-bottom: 30px !important;
-    background-image: var(--section-background-color) !important;
-    color: white !important;
+    color: var(--text-color) !important;
   }
   
   .tech-icons {
@@ -13,12 +12,12 @@
     margin: 15px !important;
     padding: 10px !important;
     opacity: 0.93 !important;
-    border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+    border: 1.7px solid var(--accent-color) !important;
     vertical-align: middle !important;
     text-align: center !important;
     border-radius: 5px !important;
     display: table !important;
-    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+    box-shadow: 2.5px 3.2px 3px 1px #992f24 !important;
     overflow: hidden !important;
     transition: all 0.4s ease 0s !important;
   }
@@ -32,7 +31,7 @@
   .tech-icons:hover {
     transform: scale(1.05) !important;
     overflow: hidden !important;
-    border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+    border: 1.9px solid var(--hover-color) !important;
   }
   .tech-icon-images {
     padding: 20px !important;
@@ -41,7 +40,7 @@
   
   .quote-card-view {
     border: none !important;
-    color: white !important;
+    color: var(--text-color) !important;
     background-color: transparent !important;
   }
   

@@ -8,8 +8,8 @@ function AboutCard() {
       <Card.Body>
         <blockquote className='blockquote mb-0'>
           <p style={{ textAlign: "justify" }}>
-            Hola a todos, soy <span className='purple'>Sebastian Giraldo </span>
-            de <span className='purple'> Ibagué, Colombia.</span>
+            Hola a todos, soy <span className='orange'>Sebastian Giraldo </span>
+            de <span className='orange'> Ibagué, Colombia.</span>
             <br />
             Actualmente desarrollo aplicaciones de manera autonoma.
             <br />
@@ -28,7 +28,7 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
+          <p style={{ color: "var(--accent-color)" }}>
             "La disciplina es la clave para transformar sueños en realidades tangibles!"{" "}
           </p>
         </blockquote>
