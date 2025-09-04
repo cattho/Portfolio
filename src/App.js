@@ -5,6 +5,8 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/ResumeNew";
+import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import {
   BrowserRouter as Router,
   Route,
@@ -27,20 +29,23 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className='App' id={load ? "no-scroll" : "scroll"}>
-        <NavBar />
-        {/* <ScrollToTop /> */}
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/project' element={<Projects data-testid="projects-component"/>} />
-          <Route path='/about' element={<About />} />
-          <Route path='/resume' element={<Resume />} />
-          <Route path='*' element={<Navigate to='/' />} />
-        </Routes>
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Preloader load={load} />
+        <div className='App' id={load ? "no-scroll" : "scroll"}>
+          <NavBar />
+          <ThemeToggle />
+          {/* <ScrollToTop /> */}
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/project' element={<Projects data-testid="projects-component"/>} />
+            <Route path='/about' element={<About />} />
+            <Route path='/resume' element={<Resume />} />
+            <Route path='*' element={<Navigate to='/' />} />
+          </Routes>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
