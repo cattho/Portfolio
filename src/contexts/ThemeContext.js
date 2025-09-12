@@ -14,11 +14,17 @@ export const useTheme = () => {
 
 // Proveedor del tema
 export const ThemeProvider = ({ children }) => {
-  // Obtener tema guardado del localStorage o usar 'light' por defecto
-  const [theme, setTheme] = useState(() => {
+  // Inicializamos el estado con 'light' para el renderizado en el servidor
+  const [theme, setTheme] = useState('light');
+
+  // Este useEffect se encargará de obtener el tema del localStorage
+  // y actualizar el estado una vez que la página se cargue en el cliente
+  useEffect(() => {
     const savedTheme = localStorage.getItem('portfolio-theme');
-    return savedTheme || 'light';
-  });
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
 
   // Función para alternar entre temas
   const toggleTheme = () => {
@@ -26,19 +32,12 @@ export const ThemeProvider = ({ children }) => {
     setTheme(newTheme);
   };
 
-  // Guardar tema en localStorage cuando cambie
+  // Guardar tema en localStorage cuando cambie y aplicar al documento
   useEffect(() => {
     localStorage.setItem('portfolio-theme', theme);
-    // Aplicar el tema al documento
     document.documentElement.setAttribute('data-theme', theme);
     document.body.setAttribute('data-theme', theme);
   }, [theme]);
-
-  // Aplicar tema inicial
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    document.body.setAttribute('data-theme', theme);
-  }, []);
 
   const value = {
     theme,
