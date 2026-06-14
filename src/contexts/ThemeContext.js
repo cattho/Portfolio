@@ -15,7 +15,7 @@ export const useTheme = () => {
 // Proveedor del tema
 export const ThemeProvider = ({ children }) => {
   // Inicializamos el estado con 'light' para el renderizado en el servidor
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   // Este useEffect se encargará de obtener el tema del localStorage
   // y actualizar el estado una vez que la página se cargue en el cliente
