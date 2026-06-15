@@ -1,11 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
+
 
 function Projects() {
   return (
     <Container fluid className='project-section'>
-    {/* <Particle /> */}
     <Container>
       <h1 className='project-heading'>
         Mis trabajos <strong className='orange'>Recientes </strong>

@@ -1,10 +1,10 @@
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
+// import { loadSlim } from "tsparticles-slim";
 
 function Particle() {
-  const particlesInit = async (engine) => {
-    await loadSlim(engine);
-  };
+  // const particlesInit = async (engine) => {
+  //   await loadSlim(engine);
+  // };
   return (
     <Particles
       id="tsparticles"
