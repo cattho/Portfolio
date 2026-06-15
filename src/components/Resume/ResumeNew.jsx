@@ -1,29 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Particle from "../Particle";
-import pdfFile from "../../Assets/../Assets/cv Juan Sebastian Giraldo Desarrollador web.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
+  const cvPath = "/Assets/Cv-Juan-Sebastian-Giraldo-Varon-frontendjr.pdf";
 
   return (
     <div>
-      <Container fluid className='resume-section'>
-        <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+      <Container fluid className="resume-section">
+        <Row
+          style={{
+            justifyContent: "center",
+            position: "relative",
+            marginBottom: "20px",
+          }}
+        >
           <Button
-            variant='primary'
-            href={pdfFile}
-            target='_blank'
+            variant="primary"
+            href={cvPath}
+            target="_blank"
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
@@ -31,22 +27,27 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className='resume'>
-          <Document file={pdfFile} className='d-flex justify-content-center'>
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.5} />
-          </Document>
-        </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant='primary'
-            href={pdfFile}
-            target='_blank'
-            style={{ maxWidth: "250px" }}
+        {/* El Visor Nativo del PDF */}
+        <Row
+          className="resume d-flex justify-content-center"
+          style={{ minHeight: "750px" }}
+        >
+          <object
+            data={cvPath}
+            type="application/pdf"
+            width="100%"
+            height="800px"
+            style={{
+              borderRadius: "8px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+            }}
           >
-            <AiOutlineDownload />
-            &nbsp;Descargar CV
-          </Button>
+            {/* Mensaje de respaldo por si el navegador es muy viejo */}
+            <p>
+              Tu navegador no soporta ver el PDF directamente.
+              <a href={cvPath}> Haz clic aquí para descargarlo.</a>
+            </p>
+          </object>
         </Row>
       </Container>
     </div>
