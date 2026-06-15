@@ -5,12 +5,12 @@ import { useCallback } from "react";
 function Particle() {
  
   const particlesInit = useCallback(async (engine) => {
-    engine;
+    console.log("particulas iniciadas",engine);
     await loadSlim(engine);
   }, []);
   
   const particlesLoaded = useCallback(async (container) => {
-     container;
+     console.log("particulas cargadas",container);
   }, []);
   
   const options = {
