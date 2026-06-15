@@ -125,7 +125,7 @@ p {
   height: 100%;
   z-index: 999999;
   background-color: var(--primary-bg-color);
-  background-image: url(../Assets/pre.svg);
+  background-image: url(../../public/Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
