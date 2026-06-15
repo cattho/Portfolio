@@ -1,19 +1,17 @@
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // Importamos el motor ligero
+import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
 
 function Particle() {
  
   const particlesInit = useCallback(async (engine) => {
-    console.log("Inicializando motor de partículas...", engine);
+    engine;
     await loadSlim(engine);
   }, []);
-
   
   const particlesLoaded = useCallback(async (container) => {
-    console.log("Contenedor de partículas cargado con éxito:", container);
+     container;
   }, []);
-
   
   const options = {
     particles: {

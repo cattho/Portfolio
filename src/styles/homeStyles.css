@@ -14,7 +14,6 @@
 .home-section {
   position: relative;
   z-index: 0;
-  background: linear-gradient(135deg, var(--primary-bg-color) 0%, var(--secondary-bg-color) 100%);
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
@@ -29,12 +28,12 @@
 }
 
 .heading {
-  font-size: 2.4em !important;
+  font-size: 42px !important;
   padding-left: 50px !important;
 }
 
 .heading-name {
-  font-size: 2.5em !important;
+  font-size: 70px!important;
   padding-left: 45px !important;
 }
 
@@ -43,12 +42,12 @@
 }
 
 .Typewriter__wrapper {
-  font-size: 2.2em !important;
+  font-size: 48px !important;
   color: var(--accent-color) !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
-  font-size: 2.4em !important;
+  font-size: 45px !important;
   color: var(--accent-color) !important;
 }
 
