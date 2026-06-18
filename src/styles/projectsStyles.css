@@ -14,15 +14,17 @@
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px var(--accent-color) !important;
+  box-shadow: 0 5px 5px 3px var(--accent-color);
+  border: 1px solid var(--accent-color);
   color: var(--text-color) !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
+
 .project-card-view:hover {
-  transform: scale(1.02) !important;
+  transform: scale(1.05);
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px var(--hover-color) !important;
 }
@@ -60,8 +62,8 @@
 
 .card-img-top {
   padding: 20px !important;
-  opacity: 0.8 !important;
-  border-radius: 10px !important;
+  height: 200px;
+  width: auto;
 }
 
 .blog-img {

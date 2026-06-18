@@ -12,7 +12,7 @@
     margin: 15px !important;
     padding: 10px !important;
     opacity: 0.93 !important;
-    border: 1.7px solid var(--accent-color) !important;
+    border: 1.7px solid var(--accent-color);
     vertical-align: middle !important;
     text-align: center !important;
     border-radius: 5px !important;
@@ -29,9 +29,8 @@
   }
   
   .tech-icons:hover {
-    transform: scale(1.05) !important;
+    transform: scale(1.03) !important;
     overflow: hidden !important;
-    border: 1.9px solid var(--hover-color) !important;
   }
   .tech-icon-images {
     padding: 20px !important;
